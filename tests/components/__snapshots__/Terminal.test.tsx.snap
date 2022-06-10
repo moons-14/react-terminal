@@ -22,8 +22,6 @@ exports[`Terminal Terminal doesn't render control bar 1`] = `
         }
       }
     >
-      
-      
       <span
         style={
           Object {
@@ -38,9 +36,7 @@ exports[`Terminal Terminal doesn't render control bar 1`] = `
       >
         <span
           className="preWhiteSpace"
-        >
-          
-        </span>
+        />
         <span
           className="caret"
         >
@@ -55,9 +51,7 @@ exports[`Terminal Terminal doesn't render control bar 1`] = `
         </span>
         <span
           className="preWhiteSpace"
-        >
-          
-        </span>
+        />
       </div>
     </div>
   </div>
@@ -89,8 +83,6 @@ exports[`Terminal Terminal doesn't render control buttons 1`] = `
         }
       }
     >
-      
-      
       <span
         style={
           Object {
@@ -105,9 +97,7 @@ exports[`Terminal Terminal doesn't render control buttons 1`] = `
       >
         <span
           className="preWhiteSpace"
-        >
-          
-        </span>
+        />
         <span
           className="caret"
         >
@@ -122,9 +112,7 @@ exports[`Terminal Terminal doesn't render control buttons 1`] = `
         </span>
         <span
           className="preWhiteSpace"
-        >
-          
-        </span>
+        />
       </div>
     </div>
   </div>
@@ -166,8 +154,6 @@ exports[`Terminal Terminal renders correctly 1`] = `
         }
       }
     >
-      
-      
       <span
         style={
           Object {
@@ -182,9 +168,7 @@ exports[`Terminal Terminal renders correctly 1`] = `
       >
         <span
           className="preWhiteSpace"
-        >
-          
-        </span>
+        />
         <span
           className="caret"
         >
@@ -199,9 +183,7 @@ exports[`Terminal Terminal renders correctly 1`] = `
         </span>
         <span
           className="preWhiteSpace"
-        >
-          
-        </span>
+        />
       </div>
     </div>
   </div>
