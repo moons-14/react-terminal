@@ -5,7 +5,9 @@ import {
   TerminalContext as _TerminalContext,
   TerminalContextProvider as _TerminalContextProvider
 } from "./contexts/TerminalContext";
-import * as Editor from "./components/Editor";
+import { StyleContext } from "./contexts/StyleContext";
+import { ThemeContext } from "./contexts/ThemeContext";
+import * as _Editor from "./components/Editor";
 import { useClickOutsideEvent as _useClickOutsideEvent } from "./hooks/terminal";
 
 export function ReactTerminal(props: any): any {
@@ -18,13 +20,17 @@ export function ReactTerminal(props: any): any {
 
 export const TerminalContext = _TerminalContext;
 export const TerminalContextProvider = _TerminalContextProvider;
-export { Editor };
+export { StyleContext };
+export { ThemeContext };
+export const Editor = _Editor.default;
 export const useClickOutsideEvent = _useClickOutsideEvent;
 
 export default {
   ReactTerminal,
   TerminalContextProvider,
   TerminalContext,
+  StyleContext,
+  ThemeContext,
   Editor,
   useClickOutsideEvent
 };
