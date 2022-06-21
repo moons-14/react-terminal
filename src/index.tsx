@@ -30,7 +30,9 @@ export default {
   TerminalContextProvider,
   TerminalContext,
   StyleContext,
+  ThemeContextProvider,
   ThemeContext,
+  StyleContextProvider,
   Editor,
   useClickOutsideEvent
 };
