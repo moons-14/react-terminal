@@ -10,12 +10,6 @@
     "watch": "rollup -cw",
     "test": "jest"
   },
-  "files": [
-    "dist",
-    "LICENCE",
-    "package.json",
-    "README.md"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bony2023/react-terminal.git"
