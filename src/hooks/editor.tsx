@@ -141,7 +141,10 @@ export const useBufferedContent = (
 
         const waiting = (
           <>
-            <span>{currentText}</span>
+            <span>
+              {">>>"}
+              {currentText}
+            </span>
             <br />
           </>
         );
