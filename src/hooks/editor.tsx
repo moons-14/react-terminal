@@ -256,7 +256,7 @@ export const useCurrentLine = (
   ) : null;
 
   const currentLine = !processCurrentLine ? (
-    <div className="bg-white">
+    <>
       {mobileInput}
       <span style={{ color: themeStyles.themePromptColor }}>{prompt}</span>
       <div className={style.lineText}>
@@ -268,9 +268,9 @@ export const useCurrentLine = (
         ) : null}
         <span className={style.preWhiteSpace}>{afterCaretText}</span>
       </div>
-    </div>
+    </>
   ) : (
-    <div className="bg-white">
+    <>
       {mobileInput}
       <div className={style.lineText}>
         {consoleFocused && caret ? ( //if caret isn't true, caret won't be displayed
@@ -280,7 +280,7 @@ export const useCurrentLine = (
         ) : null}
         <span className={style.preWhiteSpace}>{temporaryContent}</span>
       </div>
-    </div>
+    </>
   );
 
   useEditorInput(
