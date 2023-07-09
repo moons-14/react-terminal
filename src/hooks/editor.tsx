@@ -25,7 +25,7 @@ export const useEditorInput = (
       return;
     }
     //checks the value of enableInput and returns if its false
-    if(!enableInput){
+    if (!enableInput) {
       return;
     }
     event.preventDefault();
@@ -58,19 +58,19 @@ export const useEditorInput = (
       nextInput = editorInput
     } else if ((event.metaKey || event.ctrlKey) && eventKey.toLowerCase() === "v") {
       navigator.clipboard.readText()
-      .then(pastedText => {
-        const [caretTextBefore, caretTextAfter] = Utils.splitStringAtIndex(editorInput || "", caretPosition);
-        nextInput = caretTextBefore + pastedText + caretTextAfter;
-        setCaretPosition(caretPosition + pastedText.length);
-        setEditorInput(nextInput);
-      });
+        .then(pastedText => {
+          const [caretTextBefore, caretTextAfter] = Utils.splitStringAtIndex(editorInput || "", caretPosition);
+          nextInput = caretTextBefore + pastedText + caretTextAfter;
+          setCaretPosition(caretPosition + pastedText.length);
+          setEditorInput(nextInput);
+        });
     } else if ((event.metaKey || event.ctrlKey) && eventKey.toLowerCase() === "c") {
       const selectedText = window.getSelection().toString();
       navigator.clipboard.writeText(selectedText)
-      .then(() => {
-        nextInput = editorInput;
-        setEditorInput(nextInput);
-      });
+        .then(() => {
+          nextInput = editorInput;
+          setEditorInput(nextInput);
+        });
     } else {
       if (eventKey && eventKey.length === 1) {
         const [caretTextBefore, caretTextAfter] = Utils.splitStringAtIndex(editorInput, caretPosition);
@@ -129,14 +129,14 @@ export const useBufferedContent = (
         const [command, ...rest] = text.trim().split(" ");
         let output = "";
 
-        if(command === "clear") {
+        if (command === "clear") {
           setBufferedContent("");
           setCurrentText("");
           setProcessCurrentLine(false);
           setCaretPosition(0);
           setBeforeCaretText("");
           setAfterCaretText("");
-          return 
+          return
         }
 
         const waiting = (
@@ -153,7 +153,7 @@ export const useBufferedContent = (
         setCaretPosition(0);
         setBeforeCaretText("");
         setAfterCaretText("");
-        
+
         if (text) {
           const commandArguments = rest.join(" ");
 
@@ -240,7 +240,7 @@ export const useCurrentLine = (
     [processCurrentLine]
   );
 
-  const mobileInput = isMobile && enableInput? (
+  const mobileInput = isMobile && enableInput ? (
     <div className={style.mobileInput}>
       <input
         type="text"
@@ -262,7 +262,7 @@ export const useCurrentLine = (
       <div className={style.lineText}>
         <span className={style.preWhiteSpace}>{beforeCaretText}</span>
         {consoleFocused && caret ? (  //if caret isn't true, caret won't be displayed
-          <span className={style.caret}> 
+          <span className={style.caret}>
             <span className={style.caretAfter} style={{ background: themeStyles.themeColor }} />
           </span>
         ) : null}
@@ -272,8 +272,9 @@ export const useCurrentLine = (
   ) : (
     <>
       {mobileInput}
+      <span style={{ color: themeStyles.themePromptColor }}>{prompt}</span>
       <div className={style.lineText}>
-        {consoleFocused && caret? ( //if caret isn't true, caret won't be displayed
+        {consoleFocused && caret ? ( //if caret isn't true, caret won't be displayed
           <span className={style.caret}>
             <span className={style.caretAfter} style={{ background: themeStyles.themeColor }} />
           </span>
