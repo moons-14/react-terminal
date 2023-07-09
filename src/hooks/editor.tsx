@@ -175,10 +175,13 @@ export const useBufferedContent = (
             output = errorMessage;
           }
         }
+        console.log("output: ", output);
         const nextBufferedContent = (
           <>
             {output ? (
               <span>
+                {">>>"}
+                AAAAA
                 {output}
               </span>
             ) : null}

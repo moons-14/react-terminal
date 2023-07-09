@@ -41,7 +41,7 @@ export default function Editor(props: any) {
   return (
     <div ref={wrapperRef} className={`${style.editor} ${!showControlBar ? style.curvedTop : null} ${showControlBar ? style.editorWithTopBar : null}`} style={{ background: themeStyles.themeBGColor }}>
       {welcomeMessage}
-      {/* {bufferedContent} */}
+      {bufferedContent}
       {currentLine}
     </div>
   );
