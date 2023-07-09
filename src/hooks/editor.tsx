@@ -266,7 +266,7 @@ export const useCurrentLine = (
             <span className={style.caretAfter} style={{ background: themeStyles.themeColor }} />
           </span>
         ) : null}
-        <span className={style.preWhiteSpace}>{afterCaretText}</span>
+        <span className={style.preWhiteSpace}>a{afterCaretText}</span>
       </div>
     </>
   ) : (
@@ -279,7 +279,7 @@ export const useCurrentLine = (
             <span className={style.caretAfter} style={{ background: themeStyles.themeColor }} />
           </span>
         ) : null}
-        <span className={style.preWhiteSpace}>{temporaryContent}</span>
+        <span className={style.preWhiteSpace}>a{temporaryContent}</span>
       </div>
     </>
   );
