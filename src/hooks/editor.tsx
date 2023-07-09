@@ -142,7 +142,7 @@ export const useBufferedContent = (
         const waiting = (
           <>
             <span>
-              {/* {currentText} */}
+              {currentText}
             </span>
             <br />
           </>
@@ -179,7 +179,6 @@ export const useBufferedContent = (
           <>
             {output ? (
               <span>
-                {">>>"}
                 {output}
               </span>
             ) : null}
